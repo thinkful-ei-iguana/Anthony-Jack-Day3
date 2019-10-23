@@ -27,22 +27,27 @@ let food = {
 };
 console.log(food.meals[3]);
 
-
 let one = {
   name: 'Steve',
   jobTitle: 'Jobs'
 };
 let two = {
   name: 'Mario',
-  jobTitle: 'Plumber'
+  jobTitle: 'Plumber',
+  boss: one
 };
 let three = {
   name: 'Yoshi',
-  jobTitle: 'Dinosaur'
+  jobTitle: 'Dinosaur',
+  boss: one
 };
 
-let arr = [one, two, three];
+let arr = [ one, two, three ];
 
-arr.forEach(function(element){
-  console.log(`${element.name} ${element.jobTitle}`);
+arr.forEach(function(element) {
+  if (element.hasOwnProperty('boss')) {
+    console.log(`${element.name} ${element.jobTitle} reports to ${element.boss.name}`);
+  } else {
+    console.log(`${element.name} ${element.jobTitle} reports to no one`);
+  }
 });
