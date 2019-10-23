@@ -9,3 +9,16 @@ let loaf = {
 };
 
 console.log(loaf.hydration());
+
+
+let Obj = {
+  foo: 'foo',
+  bar: 'bar',
+  fum: 2,
+  quux: 3,
+  spam: 4
+};
+
+for(let i in Obj){
+  console.log(`${i} ${Obj[i]} `);
+}
