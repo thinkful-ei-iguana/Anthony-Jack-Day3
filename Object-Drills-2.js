@@ -51,3 +51,34 @@ arr.forEach(function(element) {
     console.log(`${element.name} ${element.jobTitle} reports to no one`);
   }
 });
+
+
+let decodeKey ={
+  a : 2,
+  b : 3,
+  c : 4,
+  d : 5
+};
+
+function decoder(word){
+  let position = -1;
+  for (let i in decodeKey){
+    if(word.charAt(0).toLowerCase() === i){
+      position = decodeKey[i];
+    }
+  }
+  if(position > 0){
+    return word.charAt(position - 1);
+  } 
+  return ' ';
+}
+
+function decodeWords(string){
+  let result = '';
+  let array = string.split(' ');
+  array.forEach(function(element){
+    let char = decoder(element);
+    result += char;
+  });
+  return result;
+}
