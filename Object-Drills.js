@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 function createMyObject() {
@@ -30,11 +31,13 @@ function personMaker() {
   return person;
 }
 
+
 function keyDeleter(obj) {
   delete obj.foo;
   delete obj.bar;
   return obj;
 }
+
 
 function makeStudentsReport(data) {
   let newArr = [];
@@ -44,8 +47,9 @@ function makeStudentsReport(data) {
   return newArr;
 }
 
-const testData = [
-  { name: 'Jane Doe', grade: 'A' },
-  { name: 'John Dough', grade: 'B' },
-  { name: 'Jill Do', grade: 'A' }
-];
+function enrollInSummerSchool (students){
+  students.forEach(function(i){
+    i.status = 'In Summer School';
+  });
+  return students;
+}
