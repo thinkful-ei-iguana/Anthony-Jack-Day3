@@ -10,7 +10,6 @@ let loaf = {
 
 console.log(loaf.hydration());
 
-
 let Obj = {
   foo: 'foo',
   bar: 'bar',
@@ -19,6 +18,11 @@ let Obj = {
   spam: 4
 };
 
-for(let i in Obj){
+for (let i in Obj) {
   console.log(`${i} ${Obj[i]} `);
 }
+
+let food = {
+  meals: [ 'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper' ]
+};
+console.log(food.meals[3]);
