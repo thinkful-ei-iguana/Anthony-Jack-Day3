@@ -61,3 +61,38 @@ function findById(items, idNum) {
     }
   });
 }
+
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago'
+};
+
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria'
+};
+
+const objectC = {
+  id: 9,
+  name: 'Billy Bear',
+  age: 62,
+  city: 'Milwaukee',
+  status: 'paused'
+};
+
+const expectedKeys = [ 'id', 'name', 'age', 'city' ];
+
+function validateKeys(object, expectedKeys) {
+  if (Object.keys(object).length !== expectedKeys.length) {
+    return false;
+  }
+  for (let i of expectedKeys) {
+    if (Object.keys(object).find((key) => key === i)) {
+      return true;
+    }
+  }
+  return false;
+}
