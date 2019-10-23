@@ -31,13 +31,11 @@ function personMaker() {
   return person;
 }
 
-
 function keyDeleter(obj) {
   delete obj.foo;
   delete obj.bar;
   return obj;
 }
-
 
 function makeStudentsReport(data) {
   let newArr = [];
@@ -47,9 +45,19 @@ function makeStudentsReport(data) {
   return newArr;
 }
 
-function enrollInSummerSchool (students){
-  students.forEach(function(i){
+function enrollInSummerSchool(students) {
+  students.forEach(function(i) {
     i.status = 'In Summer School';
   });
   return students;
+}
+
+const scratchData = [ { id: 22, foo: 'bar' }, { id: 28, foo: 'bizz' }, { id: 19, foo: 'bazz' } ];
+
+function findById(items, idNum) {
+  items.forEach(function(i) {
+    if (i.id === idNum) {
+      return i;
+    }
+  });
 }
