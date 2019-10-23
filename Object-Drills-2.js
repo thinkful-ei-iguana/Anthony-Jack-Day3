@@ -110,7 +110,7 @@ function createCharacter(name, nickName, race, origin, attack, defense) {
     attack,
     defense,
     describe: function() {
-      return `${this.name} is a ${this.race} from ${origin}`;
+      return `${this.name} is a ${this.race} from ${this.origin}`;
     },
     elvaluateFight: function(character) {
       let x = this.attack - character.defense;
