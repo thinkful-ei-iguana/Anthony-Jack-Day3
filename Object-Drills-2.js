@@ -26,3 +26,23 @@ let food = {
   meals: [ 'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper' ]
 };
 console.log(food.meals[3]);
+
+
+let one = {
+  name: 'Steve',
+  jobTitle: 'Jobs'
+};
+let two = {
+  name: 'Mario',
+  jobTitle: 'Plumber'
+};
+let three = {
+  name: 'Yoshi',
+  jobTitle: 'Dinosaur'
+};
+
+let arr = [one, two, three];
+
+arr.forEach(function(element){
+  console.log(`${element.name} ${element.jobTitle}`);
+});
